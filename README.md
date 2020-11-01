@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# Chat App folder Structure Explanation
+## src/API
+Folder where all api calls is located
+
+## src/components
+Folder where components is without logic (calling to redux actions)
+
+## src/containers
+Folder where components is with logic (calling to redux actions)  
+
+## src/hooks
+Folder with custom hooks
+
+## src/pages
+Folder contains components with page layouts
+
+## src/services
+Folder where is redux configuration:
+- actions - for redux actions
+- constants - to store constant variables
+- reducer - for redux reducer to handle state changes
+- saga - for redux saga to handle api calls
+# Create React App Documentation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +90,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Philosophical question 
+
+*Why usually programmers want to deep dive into harder problems and don’t exercise basics to achieve the best results like sports players do?*

@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch } from 'react-router-dom';
+
+//Custom routes
+import PrivateRoute from './components/PrivateRoute';
+import AuthRoute from './components/AuthRoute';
+
+//Pages
+import LoginPage from './pages/LoginPage';
+import ChatPage from './pages/ChatPage';
+import ProfilePage from './pages/ProfilePage';
+
+//Snackbar for error popups
+import Error from './components/Error';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Error />
+      <Switch>
+        <AuthRoute exact path="/" component={LoginPage} />
+        <PrivateRoute exact path="/chat" component={ChatPage} />
+        <PrivateRoute exact path="/profile" component={ProfilePage} />
+      </Switch>
+    </>
   );
 }
 
